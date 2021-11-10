@@ -1,0 +1,69 @@
+{
+  "name": "hydrogen_test1",
+  "version": "1.0.0",
+  "description": "前端工具库",
+  "main": "lib/fe-utils-min.js",
+  "module": "lib/fe-utils-esm.js",
+  "type": "index.d.ts",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-c": "jest --coverage",
+    "lint": "tslint \"src/**/*.ts\" ",
+    "compile:w": "tsc -w -p tsconfig.json",
+    "compile": "tsc -p tsconfig.json",
+    "dev": "rollup -w -c scripts/config.js --environment TARGET:fe-utils",
+    "dev:cjs": "rollup -w -c scripts/config.js --environment TARGET:fe-utils-cjs",
+    "dev:esm": "rollup -c scripts/config.js --environment TARGET:fe-utils-esm",
+    "build": "babel-node scripts/build.js",
+    "publish": "bash scripts/publish.sh",
+    "publish:patch": "1.0.2",
+    "publish:minor": "1.5.0",
+    "publish:major": "1.0.2",
+    "publish:premajor": "1.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghfengye/mutils.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "private": false,
+  "keywords": [],
+  "author": "mzn",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@types/chai": "^4.2.3",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^12.7.5",
+    "chai": "^4.2.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jest": "^27.3.1",
+    "jsdoc": "^3.6.3",
+    "ora": "^3.4.0",
+    "rollup": "^1.20.2",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-jest": "^27.0.7",
+    "ts-loader": "^6.1.2",
+    "tslint": "^5.19.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
