@@ -26,7 +26,7 @@
     "publish:premajor": "1.0.2"
   },
   "jest": {
-    "testEnvironment": "node" 
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.16.0",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@types/chai": "^4.2.3",
